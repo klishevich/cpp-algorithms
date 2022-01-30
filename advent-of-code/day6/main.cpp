@@ -29,26 +29,18 @@ void print_out_map(const FishMapType &my_map)
         cout << k << " : " << v << endl;
 }
 
-void update_fish_map(FishMapType &fish_map, int key, IntType value = 1) {
-    fish_map[key] = fish_map.count(key) == 0 ? value : fish_map.at(key) + value;
-}
-
 FishMapType parse_data(const string &str)
 {
     vector<int> fishes;
     stringstream ss(str);
-    while (ss.good())
-    {
-        string element;
-        getline(ss, element, ',');
+    string element;
+    while (getline(ss, element, ','))
         fishes.push_back(atoi(element.c_str()));
-    }
     print_out_vector(fishes);
     
     FishMapType my_map;
     
-    for(const auto fish : fishes)
-        update_fish_map(my_map, fish);
+    for(const auto fish : fishes) my_map[fish]++;
     return my_map;
 }
 
@@ -60,18 +52,9 @@ int main( )
     
     vector<string> file_lines;
     
-    ifstream my_file(FILE_NAME);
-    if (my_file.is_open())
-    {
-        cout << "file is open" << endl;
-        string line;
-        while (getline(my_file, line))
-        {
-            // cout << "new line read: " << line << endl;
-            file_lines.push_back(line);
-        }
-        my_file.close();
-    }
+    string line;
+    for (ifstream my_file(FILE_NAME); getline(my_file, line);) 
+        file_lines.push_back(line);
     cout << "file_lines length: " << file_lines.size() << endl;
 
     string fishes_str = file_lines.at(0);
@@ -86,10 +69,10 @@ int main( )
         for (const auto &[k,v] : fish_map) {
             if (k == 0)
             {
-                update_fish_map(new_fish_map, 6, v);
-                update_fish_map(new_fish_map, 8, v);
+                new_fish_map[6] +=v;
+                new_fish_map[8] +=v;
             } else {
-                update_fish_map(new_fish_map, k-1, v);
+                new_fish_map[k-1] +=v;
             }
         }
         fish_map = new_fish_map;
