@@ -9,7 +9,6 @@ using namespace std;
 using IntType = unsigned long long int;
 using FishMapType = map<int, IntType>;
 
-
 const int DAYS = 256;
 // const string FILE_NAME = "test_data.txt";
 const string FILE_NAME = "data.txt";

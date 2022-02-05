@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=day6
+ProjectName            :=cpp20support
 ConfigurationName      :=Debug
 WorkspacePath          :=/Users/mike/it_veterans/cpp-algorithms/advent-of-code
-ProjectPath            :=/Users/mike/it_veterans/cpp-algorithms/advent-of-code/day6
+ProjectPath            :=/Users/mike/it_veterans/cpp-algorithms/advent-of-code/cpp20support
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="day6.txt"
+ObjectsFileList        :="cpp20support.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/Applications/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/enum.cpp$(ObjectSuffix) 
 
 
 
@@ -91,11 +91,11 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/mike/it_veterans/cpp-algorithms/advent-of-code/day6/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+$(IntermediateDirectory)/enum.cpp$(ObjectSuffix): enum.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/enum.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/enum.cpp$(DependSuffix) -MM enum.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/mike/it_veterans/cpp-algorithms/advent-of-code/cpp20support/enum.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/enum.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/enum.cpp$(PreprocessSuffix): enum.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/enum.cpp$(PreprocessSuffix) enum.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

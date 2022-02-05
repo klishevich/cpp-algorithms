@@ -4,5 +4,5 @@
 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
 -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
--I/Users/mike/it_veterans/cpp-algorithms/advent-of-code/day6
+-I/Users/mike/it_veterans/cpp-algorithms/advent-of-code/cpp20support
 -std=c++2a

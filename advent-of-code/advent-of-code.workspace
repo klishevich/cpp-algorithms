@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="advent-of-code" Database="" Version="10000">
-  <Project Name="day6" Path="day6/day6.project" Active="Yes"/>
+  <Project Name="day6" Path="day6/day6.project" Active="No"/>
+  <Project Name="cpp20support" Path="cpp20support/cpp20support.project" Active="No"/>
+  <Project Name="day7" Path="day7/day7.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
       <Project Name="day6" ConfigName="Debug"/>
+      <Project Name="cpp20support" ConfigName="Debug"/>
+      <Project Name="day7" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
       <Project Name="day6" ConfigName="Release"/>
+      <Project Name="cpp20support" ConfigName="Release"/>
+      <Project Name="day7" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
