@@ -98,6 +98,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="data_test2.txt"/>
     <File Name="data.txt"/>
     <File Name="data_test.txt"/>
     <File Name="main.cpp"/>
