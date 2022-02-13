@@ -66,10 +66,6 @@ struct Cost {
 void part1(const CrabMap &crab_map, int crabs_cnt)
 {
     int min_index = crab_map.begin()->first;
-    int max_index = crab_map.rbegin()->first;
-    print_out_map(crab_map);
-    cout << "min index " << min_index << endl;
-    cout << "max index " << max_index << endl;
 
     Cost cost {crab_map.begin()->first, 0, 0, 0, crabs_cnt - crab_map.begin()->second};
     
@@ -105,8 +101,8 @@ void part1(const CrabMap &crab_map, int crabs_cnt)
 
 int calc_cost(const CrabMap &crab_map, int to)
 {
-    //CrabMap::iterator it_start = left_cost_calc ? crab_map.begin() : crab_map.rbegin();
-    //CrabMap::iterator it_end = left_cost_calc ? crab_map.end() : crab_map.rend();
+//    CrabMap::iterator it_start = left_cost_calc ? crab_map.begin() : crab_map.rbegin();
+//    CrabMap::iterator it_end = left_cost_calc ? crab_map.end() : crab_map.rend();
 
     int left_cost = 0;
     for(CrabMap::const_iterator iter = crab_map.begin(); iter != crab_map.end(); ++iter)
